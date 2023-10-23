@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.*
 import java.time.LocalDate
 
 @RestController
-class MonthlyReportController(
+class ReportController(
     val monthlyReportsService: MontlyReportsService
 ) {
 
     @PostMapping("/insert")
-    fun insertMonthlyReport(@RequestBody report: MonthlyReport) {
-        monthlyReportsService.insertMonthlyReport(report)
+    fun insertMonthlyReport(@RequestBody report: MonthlyReport): Boolean {
+        return monthlyReportsService.insertMonthlyReport(report)
     }
 
     @GetMapping("/filter")

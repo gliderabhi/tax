@@ -1,6 +1,6 @@
 package com.example.tax.service
 
-import com.example.tax.model.User
+import com.example.tax.model.UserData
 import com.example.tax.repository.LoginRepository
 import org.springframework.stereotype.Service
 
@@ -9,8 +9,14 @@ class LoginService(
     val userRepository: LoginRepository
 ) {
 
-    fun register(user: User) {
-        userRepository.save(user)
+    fun register(userData: UserData): Boolean {
+        return try {
+            userRepository.save(userData)
+            true
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
     }
 
     fun login(username: String, password: String): Boolean {
@@ -29,7 +35,7 @@ class LoginService(
         return false
     }
 
-    fun getUserByUsername(username: String): User? {
+    fun getUserByUsername(username: String): UserData? {
         val storedUser = userRepository.findById(username)
         return if (storedUser.isPresent) {
             storedUser.get()

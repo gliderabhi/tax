@@ -7,11 +7,17 @@ import java.time.LocalDate
 
 @Service
 class MontlyReportsService(
-    private val reportRepository: MonthlyReportRepository
+    val reportRepository: MonthlyReportRepository
 ) {
 
-    fun insertMonthlyReport(report: MonthlyReport) {
-        reportRepository.save(report)
+    fun insertMonthlyReport(report: MonthlyReport): Boolean {
+        return try {
+            reportRepository.save(report)
+            true
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
     }
 
     fun getMonthlyReportsByDateRange(

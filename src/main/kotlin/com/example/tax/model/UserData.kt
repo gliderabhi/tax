@@ -4,9 +4,9 @@ import jakarta.persistence.Entity
 import jakarta.persistence.Id
 
 @Entity
-data class User(
+data class UserData(
     @Id
-    val username: String,
-    var password: String,
-    val email: String
+    val username: String = "",
+    var password: String = "",
+    val email: String = ""
 )
