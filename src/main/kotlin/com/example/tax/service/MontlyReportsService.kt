@@ -26,6 +26,6 @@ class MontlyReportsService(
     ): List<MonthlyReport> {
         val startLocalDate = LocalDate.parse(startDate)
         val endLocalDate = LocalDate.parse(endDate)
-        return reportRepository.findByReportDateBetween(startLocalDate, endLocalDate)
+        return reportRepository.findByDateBetween(startLocalDate, endLocalDate)
     }
 }
