@@ -18,7 +18,7 @@
                     <h4 class="text-white display-2">Tax regime</h4>
                 </div>
             </div>
-            <div class="p-2 ms-auto text-white">
+            <div class="p-2 ms-auto text-white" id="report_top_username">
                 Username
             </div>
             <div class="vr"></div>
@@ -49,7 +49,7 @@
         </div>
 
 
-        
+
 
         <div class="row align-items-center border m-0">
             <div class="col">
@@ -68,7 +68,7 @@
                             <div class="col">
                                 <p>of 5</p>
                             </div>
-                    
+
                         </div>
                     </div>
                     <div class="col">
@@ -92,7 +92,8 @@
             </div>
             <div class="col">
                 <div class="dropdown">
-                    <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         100%
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -104,8 +105,9 @@
             </div>
             <div class="col">
                 <div class="dropdown">
-                    <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="save.png"  style="width: 30px; height: 30px;" alt="">
+                    <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="save.png" style="width: 30px; height: 30px;" alt="">
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="#">Option 1</a></li>
@@ -115,7 +117,7 @@
                 </div>
             </div>
             <div class="col">
-                <img src="print.png"  style="width: 30px; height: 30px;" alt="">
+                <img src="print.png" style="width: 30px; height: 30px;" alt="">
             </div>
 
             <div class="col">
@@ -132,7 +134,14 @@
                 </div>
             </div>
         </div>
+
+        <div>
+            <ul id="list-container">
+                <!-- List items will be added here dynamically -->
+            </ul>
+        </div>
     </div>
 </body>
+<script src="../js/report.js"></script>
 
 </html>

@@ -39,7 +39,7 @@ form.addEventListener("submit", function (event) {
     })
     .then(data => {
       if(data == "Login successful") {
-         window.location.href = "register.html";
+         window.location.href = "tax-regine.html";
       }else {
          alert("Login failed, Please try again with correct credentials.")
       }

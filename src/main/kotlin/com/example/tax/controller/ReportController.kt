@@ -10,12 +10,13 @@ import java.time.LocalDate
 class ReportController(
     val monthlyReportsService: MontlyReportsService
 ) {
-
+    @CrossOrigin
     @PostMapping("/insert")
     fun insertMonthlyReport(@RequestBody report: MonthlyReport): Boolean {
         return monthlyReportsService.insertMonthlyReport(report)
     }
 
+    @CrossOrigin
     @GetMapping("/filter")
     fun getMonthlyReportsByDateRange(
         @RequestParam startDate: String,

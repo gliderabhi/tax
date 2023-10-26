@@ -18,7 +18,7 @@
                     <h4 class="text-white display-2">Tax regime</h4>
                 </div>
             </div>
-            <div class="p-2 ms-auto text-white">
+            <div class="p-2 ms-auto text-white" id="username_top">
                 Username
             </div>
             <div class="vr"></div>
@@ -39,21 +39,21 @@
         <div class="border p-3 full-width-div  bg-secondary-subtle">
             <form style="width: 600px;">
                 <div class="mb-3 row">
-                    <label class="col-form-label col-md-2" for="pNo">P No</label>
+                    <label class="col-form-label col-md-2" for="pNo" id="email">P No</label>
                     <div class="col-md-10">
                         <input class="form-control w-100" type="text" id="pNo">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
-                    <label class="col-form-label col-md-2" for="name">Name</label>
+                    <label class="col-form-label col-md-2" for="name" id="username">Name</label>
                     <div class="col-md-10">
                         <input class="form-control w-100" type="text" id="name">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
-                    <label class="col-form-label col-md-2" for="level">Level</label>
+                    <label class="col-form-label col-md-2" for="level" id="level">Level</label>
                     <div class="col-md-10">
                         <input class="form-control w-100" type="text" id="level">
                     </div>
@@ -117,10 +117,10 @@
 
         <div class="row justify-content-center">
             <div class="col-md-6 text-center m-4">
-                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-primary" id="submit_button">Submit</button>
             </div>
         </div>
     </div>
 </body>
-
+<script src="../js/tax_regime.js"></script>
 </html>

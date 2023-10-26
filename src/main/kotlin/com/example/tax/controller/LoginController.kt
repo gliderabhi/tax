@@ -23,6 +23,12 @@ class LoginController(
             "Login failed"
         }
     }
+
+    @CrossOrigin
+    @PostMapping("/getUser")
+    fun getUser(@RequestParam userName : String): UserData? {
+        return userService.getUserByUsername(userName)
+    }
     @CrossOrigin
     @PostMapping("/forgot-pin")
     fun forgotPin(@RequestBody userData: UserData, @RequestParam newPassword: String): String {
