@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tax regime</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="hstack gap-3 bg-primary">
+            <div class="p-2">
+                <div class="row">
+                    <!-- <img src="login_icon.svg" alt="login" style="width: 50px; height: 50px;"> -->
+                    <h4 class="text-white display-2">Tax regime</h4>
+                </div>
+            </div>
+            <div class="p-2 ms-auto text-white">
+                Username
+            </div>
+            <div class="vr"></div>
+            <div class="p-2 text-body-tertiary">
+                Logout
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- The full-width div -->
+                <div class="full-width-div bg-primary-subtle text-center">
+                    <p>Tax regime switch option facility from default (New tax regime) to old tax regime for financial
+                        year 2023-24.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border p-3 full-width-div  bg-secondary-subtle">
+            <form style="width: 600px;">
+                <div class="mb-3 row">
+                    <label class="col-form-label col-md-2" for="pNo">P No</label>
+                    <div class="col-md-10">
+                        <input class="form-control w-100" type="text" id="pNo">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-form-label col-md-2" for="name">Name</label>
+                    <div class="col-md-10">
+                        <input class="form-control w-100" type="text" id="name">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-form-label col-md-2" for="level">Level</label>
+                    <div class="col-md-10">
+                        <input class="form-control w-100" type="text" id="level">
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="full-width-div bg-white">
+                <p class="mt-3 m-4">Documents</p>
+
+                <div class="full-width-div row justify-content-center">
+                    <div style="height: 1px; " class="bg-black"></div>
+                    <div class="full-width-div col-md-6 text-center">
+                        <button class="btn btn-primary m-2 mb-3">CBDT Clarification for TDS - 115BAC</button>
+                        <button class="btn btn-primary m-2 mb-3">New Tax Slab vs Old Tax Slab Options</button>
+                        <button class="btn btn-primary m-2 mb-3">Tax Calculator</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="mt-2" style="font-size: large; color: black; font-weight: 500;">Your are currently under the
+                    Income tax default option - (New Tax Regime).</p>
+            </div>
+
+            <div>
+                <p class="mt-2" style="font-size: large; color: black; font-weight: 300;">Do you want to switch from
+                    option 1- (New tax regime) to Option - 2 (Old Tax Regime)</p>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Yes</a></li>
+                        <li><a class="dropdown-item" href="#">No</a>/a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <p class="mt-2" style="font-size: large; color: black; font-weight: 300;">Your are currently under the
+                    Income tax default option - (New Tax Regime).</p>
+            </div>
+
+            <div class="col-6">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="read_document">
+                    <label for="read_document" class="form-check-label">I have read the documents.</label>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="switch_accept">
+                    <label for="switch_accept" class="form-check-label">I can switch only once in a year.</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center m-4">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

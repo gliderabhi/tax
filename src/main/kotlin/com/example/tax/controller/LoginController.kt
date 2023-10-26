@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.*
 class LoginController(
     val userService: LoginService
 ) {
-
+    @CrossOrigin
     @PostMapping("/register")
     fun register(@RequestBody userData: UserData): Boolean {
         return userService.register(userData)
     }
 
+    @CrossOrigin
     @PostMapping("/login")
     fun login(@RequestBody userData: UserData): String {
         return if (userService.login(userData.username, userData.password)) {
@@ -22,10 +23,10 @@ class LoginController(
             "Login failed"
         }
     }
-
+    @CrossOrigin
     @PostMapping("/forgot-pin")
     fun forgotPin(@RequestBody userData: UserData, @RequestParam newPassword: String): String {
-        return if (userService.forgotPin(userData.username, newPassword)) {
+        return if (userService.forgotPin(userData.username, newPassword, userData.password)) {
             "Password updated successfully"
         } else {
             "Password update failed"

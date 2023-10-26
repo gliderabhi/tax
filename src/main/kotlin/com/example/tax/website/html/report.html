@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tax regime</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="hstack gap-3 bg-primary">
+            <div class="p-2">
+                <div class="row">
+                    <!-- <img src="login_icon.svg" alt="login" style="width: 50px; height: 50px;"> -->
+                    <h4 class="text-white display-2">Tax regime</h4>
+                </div>
+            </div>
+            <div class="p-2 ms-auto text-white">
+                Username
+            </div>
+            <div class="vr"></div>
+            <div class="p-2 text-body-tertiary">
+                Logout
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <!-- First Date Picker -->
+                <div class="mb-3">
+                    <label for="startDate" class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="startDate" name="startDate">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Second Date Picker -->
+                <div class="mb-3">
+                    <label for="endDate" class="form-label">End Date</label>
+                    <input type="date" class="form-control" id="endDate" name="endDate">
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <!-- Submit Button -->
+                <button class="btn btn-primary" id="submitBtn">View</button>
+            </div>
+        </div>
+
+
+        
+
+        <div class="row align-items-center border m-0">
+            <div class="col">
+                <div class="row border align-items-center m-0" style="width: 300px;">
+                    <div class="col">
+                        <img src="double_preb.png" style="width: 20px; height: 20px;" alt="">
+                    </div>
+                    <div class="col">
+                        <img src="prev.png" style="width: 20px; height: 20px;" alt="">
+                    </div>
+                    <div class="col">
+                        <div class="row" style="width: 100px;">
+                            <div class="col">
+                                <input type="text" style="width: 40px; height: 20px;">
+                            </div>
+                            <div class="col">
+                                <p>of 5</p>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="next.png" style="width: 20px; height: 20px;" alt="">
+                    </div>
+                    <div class="col">
+                        <img src="double_next.png" style="width: 20px; height: 20px;" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!-- Item 2 -->
+                <div class="border m-0" style="width: 30px; height: 20px;">
+                    <img src="reload.png" style="width: 30px; height: 20px;" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div class="border m-0" style="width: 30px; height: 20px;">
+                    <img src="prev_in_circle.png" style="width: 30px; height: 20px;" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        100%
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        <li><a class="dropdown-item" href="#">Option 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="save.png"  style="width: 30px; height: 30px;" alt="">
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        <li><a class="dropdown-item" href="#">Option 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <img src="print.png"  style="width: 30px; height: 30px;" alt="">
+            </div>
+
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="border" style="height: 30px; width: 50px;"></div>
+                    </div>
+                    <div class="col">
+                        <p>Find</p>
+                    </div>
+                    <div class="col">
+                        <p>Next</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

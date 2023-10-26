@@ -11,8 +11,13 @@ class LoginService(
 
     fun register(userData: UserData): Boolean {
         return try {
-            userRepository.save(userData)
-            true
+            val user = userRepository.findById(userData.username)
+            if (user.isEmpty) {
+                userRepository.save(userData)
+                true
+            } else {
+                false
+            }
         } catch (e: Exception) {
             e.printStackTrace()
             false
@@ -24,15 +29,20 @@ class LoginService(
         return storedUser.isPresent && storedUser.get().password == password
     }
 
-    fun forgotPin(username: String, newPassword: String): Boolean {
+    fun forgotPin(username: String, newPassword: String, oldPassword : String): Boolean {
         val storedUser = userRepository.findById(username)
-        if (storedUser.isPresent) {
+        return if (storedUser.isPresent) {
             val user = storedUser.get()
-            user.password = newPassword
-            userRepository.save(user)
-            return true
+            if (user.password == oldPassword) {
+                user.password = newPassword
+                userRepository.save(user)
+                true
+            } else {
+                false
+            }
+        } else {
+            false
         }
-        return false
     }
 
     fun getUserByUsername(username: String): UserData? {
